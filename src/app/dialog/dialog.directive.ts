@@ -1,10 +1,10 @@
-import { Directive } from '@angular/core';
+import { Directive, ViewContainerRef } from '@angular/core';
 
 @Directive({
   selector: '[appDialog]'
 })
 export class DialogDirective {
 
-  constructor() { }
+  constructor(public viewContainerRef: ViewContainerRef) { }
 
 }
