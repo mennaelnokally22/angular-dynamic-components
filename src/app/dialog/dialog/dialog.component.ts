@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Type, ComponentRef, ComponentFactoryResolver } from '@angular/core';
+import { DialogService } from '../dialog.service';
+import { Observable, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-dialog',
@@ -8,8 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class DialogComponent implements OnInit {
 
   constructor() { }
+  childComponentType: Type<any>;
 
-  ngOnInit() {
+  private readonly _onClose = new Subject<any>();
+  public onClose$ = this._onClose.asObservable();  ngOnInit() {
   }
+ onClose(){
+   this._onClose.next();
+ }
 
 }
