@@ -15,6 +15,7 @@ import { TestComponent } from './test/test.component';
     AppRoutingModule,
     DialogModule
   ],
+  entryComponents:[TestComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
