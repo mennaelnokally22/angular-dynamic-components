@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DialogComponent } from './dialog/dialog/dialog.component';
+import { DialogModule } from './dialog/dialog.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DialogComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
